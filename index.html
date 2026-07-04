@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F3EA;
-    --ink:#1E3A3F;
-    --ink-soft:#4A6166;
-    --sea:#2F7A78;
-    --sea-light:#DCEDEA;
-    --coral:#E2734F;
-    --coral-light:#FBE6DC;
-    --clay:#B98545;
-    --clay-light:#F3E7D3;
-    --line:#DDD5C3;
-    --card:#FFFFFF;
+    --paper:#ECE1D0;
+    --ink:#2C3B30;
+    --ink-soft:#5C6B54;
+    --sea:#3E7C93;
+    --sea-light:#E1EBEE;
+    --coral:#B33A22;
+    --coral-light:#F2DCD3;
+    --clay:#B8965A;
+    --clay-light:#F0E4CE;
+    --line:#D8C9AC;
+    --card:#FBF7EF;
   }
   *{box-sizing:border-box;}
   body{
@@ -29,14 +29,25 @@
     font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+  .wrap{
+    max-width:900px;margin:0 auto;padding:28px 20px 60px;
+    border:1px solid var(--clay);
+    outline:6px solid var(--paper);
+    outline-offset:-14px;
+    box-shadow:0 0 0 1px var(--clay) inset;
+  }
   .hero{
-    background:linear-gradient(180deg,var(--ink) 0%, #24494F 100%);
-    border-radius:18px;
+    background:linear-gradient(180deg,var(--ink) 0%, #3E5240 100%);
+    border-radius:4px;
     padding:32px 28px;
-    color:#F7F3EA;
+    color:var(--paper);
     position:relative;
     overflow:hidden;
+    border:1px solid var(--clay);
+  }
+  .compass{
+    position:absolute;top:14px;right:18px;width:46px;height:46px;
+    opacity:.35;
   }
   .hero h1{
     font-family:"Shippori Mincho",serif;
@@ -51,9 +62,9 @@
   .hero-stats .lbl{font-size:12px;opacity:.75;display:block;margin-top:2px;}
   .sw-banner{
     margin-top:18px;
-    background:rgba(226,115,79,.18);
-    border:1px solid rgba(226,115,79,.4);
-    border-radius:10px;
+    background:rgba(179,58,34,.20);
+    border:1px solid rgba(179,58,34,.45);
+    border-radius:6px;
     padding:10px 14px;
     font-size:13px;
     line-height:1.6;
@@ -240,6 +251,13 @@
 <div class="wrap">
 
   <div class="hero">
+    <svg class="compass" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#ECE1D0" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#ECE1D0" stroke-width="1"/>
+      <polygon points="50,10 56,50 50,90 44,50" fill="#ECE1D0"/>
+      <polygon points="10,50 50,44 90,50 50,56" fill="#ECE1D0" opacity="0.6"/>
+      <text x="50" y="22" text-anchor="middle" font-size="10" fill="#ECE1D0" font-family="Georgia,serif">N</text>
+    </svg>
     <h1>岡山 Travel Loop</h1>
     <p class="sub">高雄 ⇄ 岡山｜2026.09.18 – 09.25｜夫妻二人行</p>
     <div class="hero-stats">
